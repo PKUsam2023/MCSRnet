@@ -54,29 +54,43 @@ The installation can be done quickly with the following statement.
 ```
 pip install -r requirements.txt
 ```
+
 We recommend using the Anaconda Python distribution, which is available for Windows, MacOS, and Linux. Installation for all required packages (listed above) has been tested using the standard instructions from the providers of each package.
 
 ## Model-Files
 
 ### CLIP Model
 For XRD-TEM CLIP Model:
+
 Training: python ./XRD-TEM CLIP/train.py
+
 Validation / Inference: python ./XRD-TEM CLIP/apply.py
 
 For XRD CLIP Model:
+
 Training: python ./XRD CLIP/train.py
+
 Validation / Inference: python ./XRD CLIP/apply.py
 
 ### Diffusion Model
 Training: python ./Diffusion/main/run.py data=<dataset> expname=<expname>
+
 The <dataset> tag can be selected from perov_CaTiO3, perov_GdFeO3, perov_NdAlO3 and , and the <expname> tag can be an arbitrary name to identify each experiment.
-Please download the dataset from Zenodo:https://zenodo.org/records/17896707 and place it in ./Diffusion/. The code will not execute properly without this dataset.
+
+Please download the dataset and model checkpoints from Zenodo:10.5281/zenodo.17896706. Please place them into the correct directories after downloading: rename best_xrd.pt by removing the _xrd suffix and put it into ./XRD CLIP/; rename best_xrd_TEM.pt by removing the _xrd_TEM suffix and put it into ./XRD-TEM CLIP/; place epoch=699-step=246399.ckpt into ./Diffusion/output/HYDRA/2025-03-12/perov_CaTiO3/; and after extracting the data archive, move the resulting folder into ./Diffusion/.
+
 Evaluation:
+
 One sample:
+
 python ./Diffusion/scripts/evaluate.py --model_path <model_path> --dataset <dataset>
+
 python ./Diffusion/scripts/compute_metrics.py --root_path <model_path> --tasks csp --gt_file data/<dataset>/test.csv 
+
 Multiple samples:
+
 python ./Diffusion/scripts/evaluate.py --model_path <model_path> --dataset <dataset> --num_evals 10
+
 python ./Diffusion/scripts/compute_metrics.py --root_path <model_path> --tasks csp --gt_file data/<dataset>/test.csv --multi_eval
 
 ## License
@@ -85,6 +99,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Citation
 If you use this code or the pre-trained models in your work, please cite our work. 
+
 - "MCSRNet: Structure interpretation via Generative Model and Multimodal Strategies from Characterization Data"
 
 ## Acknowledgments
