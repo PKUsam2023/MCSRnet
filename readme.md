@@ -77,7 +77,7 @@ Training: python ./Diffusion/main/run.py data=<dataset> expname=<expname>
 
 The <dataset> tag can be selected from perov_CaTiO3, perov_GdFeO3, perov_NdAlO3 and , and the <expname> tag can be an arbitrary name to identify each experiment.
 
-Please download the dataset and model checkpoints from Zenodo:10.5281/zenodo.17896706. Please place them into the correct directories after downloading: rename best_xrd.pt by removing the _xrd suffix and put it into ./XRD CLIP/; rename best_xrd_TEM.pt by removing the _xrd_TEM suffix and put it into ./XRD-TEM CLIP/; place epoch=699-step=246399.ckpt into ./Diffusion/output/HYDRA/2025-03-12/perov_CaTiO3/; and after extracting the data archive, move the resulting folder into ./Diffusion/.
+Please download the dataset and model checkpoints from Zenodo:[10.5281/zenodo.17896706](https://zenodo.org/records/17900555). Please place them into the correct directories after downloading: rename best_xrd.pt by removing the _xrd suffix and put it into ./XRD CLIP/; rename best_xrd_TEM.pt by removing the _xrd_TEM suffix and put it into ./XRD-TEM CLIP/; place epoch=699-step=246399.ckpt into ./Diffusion/output/HYDRA/2025-03-12/perov_CaTiO3/; and after extracting the data archive, move the resulting folder into ./Diffusion/.
 
 Evaluation:
 
