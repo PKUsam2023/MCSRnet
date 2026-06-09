@@ -1,4 +1,4 @@
-# MCSRNet
+# CrySTARNet
 
 <div align='center'>
  
@@ -7,13 +7,13 @@
 
 </div>
 
-**Title** - MCSRNet: Structure interpretation via Generative Model and Multimodal Strategies from Characterization Data
+**Title** - CrySTARNet: X‑ray Diffraction Refinement for Disordered Inorganic Crystals via Generative Artificial Intelligence
 
 ---
 
 ## Table of Contents
 
-- [MCSRNet](#MCSRNet)
+- [CrySTARNet](#CrySTARNet)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Model Architecture](#model-architecture)
@@ -38,7 +38,7 @@ As illustrated in Figure 1, the workflow consists of multimodal input, structure
 
 ![Model Architecture](pic1.png)
 
-Further explain the details in the [paper](https://github.com/PKUsam2023/MCSRNet), providing context and additional information about the architecture and its components.
+Further explain the details in the [paper](https://github.com/PKUsam2023/CrySTARNet), providing context and additional information about the architecture and its components.
 
 ## Getting Started
 
@@ -100,7 +100,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Citation
 If you use this code or the pre-trained models in your work, please cite our work. 
 
-- "MCSRNet: Structure interpretation via Generative Model and Multimodal Strategies from Characterization Data"
+- "CrySTARNet: X‑ray Diffraction Refinement for Disordered Inorganic Crystals via Generative Artificial Intelligence"
 
 ## Acknowledgments
 The main framework of the Diffusion part is build upon DiffCSP. All entries in the database were extracted and curated from the ICSD.
